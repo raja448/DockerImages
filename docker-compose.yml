@@ -4,6 +4,10 @@ tomcat:
         - mysql:mysql
     ports:
         - 8080:8080
+    volumes:
+        - ./docker/tomcat/conf/context.xml:/usr/local/tomcat/conf/context.xml:ro
+        - ./Servers/Apache Tomcat v7.0 (2) at localhost-config/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:ro
+        
  mysql:
     image: mysql
     ports:
