@@ -1,3 +1,13 @@
+nginx:
+    image: nginx
+    links:
+        - tomcat:tomcat
+    ports:
+        - 80:80
+        - 443:443
+    volumes:
+        - ./docker/nginx/vhosts:/etc/nginx/conf.d
+        - ./docker/nginx/config/nginx.conf:/etc/nginx/nginx.conf:ro
 tomcat:
     image: tomcat:7
     links:
