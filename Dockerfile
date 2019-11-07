@@ -1,2 +1,2 @@
-FROM tomcat:8.0-alpine
+FROM tomcat
 COPY /target/**.war /usr/local/tomcat/webapps/raja.war
